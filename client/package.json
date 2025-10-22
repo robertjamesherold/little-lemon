@@ -11,10 +11,13 @@
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.1.14",
+    "clsx": "^2.1.1",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
+    "react-router-dom": "^6.30.1",
     "sass-embedded": "^1.93.2",
     "svgr": "^1.10.0",
+    "tailwindcss": "^4.1.14",
     "vite-plugin-svgr": "^4.5.0"
   },
   "devDependencies": {
