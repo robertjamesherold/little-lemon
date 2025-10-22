@@ -99,6 +99,7 @@ export function ReservationForm({ onCancel, onComplete }: ReservationFormProps) 
             onClick={handleBack}
             className="w-full"
             variant="secondary"
+            size='md'
           >
             Back
           </Button>
@@ -108,6 +109,7 @@ export function ReservationForm({ onCancel, onComplete }: ReservationFormProps) 
           className="w-full"
           variant="primary"
           disabled={!canProceed}
+          size='md'
         >
           {isFinalStep ? "Confirm" : "Continue"}
         </Button>

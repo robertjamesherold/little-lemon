@@ -61,7 +61,7 @@ export function ThankYouPage() {
         </Article>
 
         <div className="flex flex-col justify-center gap-3 sm:flex-row">
-          <Button onClick={handleBookAgain} variant="primary" size="sm" className="w-full sm:w-full">
+          <Button onClick={handleBookAgain} variant="primary" size="lg" className="w-full sm:w-full">
             Further reservation
           </Button>
           <Button onClick={handleGoHome} variant="secondary" size="lg" className="w-full sm:w-full">
