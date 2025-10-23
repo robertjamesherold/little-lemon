@@ -19,8 +19,8 @@ export function HomePageMain({ children }: MainProps) {
 }
 
 export function ThankPageMain({ children, className }: MainProps) {
-  return <main className={`relative flex-1 flex min-h-[90vh] flex-col mx-auto h-full w-full items-start justify-center ${className}`}>
-          <div className="flex h-full w-full mx-auto items-center justify-center md:px-6 md:py-6">
+  return <main className={`relative flex-1 flex min-h-[100vh] flex-col mx-auto h-full w-full items-start justify-center ${className}`}>
+          <div className="flex h-full w-full mx-auto items-center justify-center md:px-6 py-0 md:py-6">
             {children}
             </div></main>;
 }

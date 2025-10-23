@@ -9,8 +9,8 @@ import './App.scss'
 
 export default function App() {
   return (<>
-  <img className='fixed z-0 h-screen w-screen inset-0 object-cover ' src={picture}/>
-    <div className='body'>
+  <img className='fixed z-0 h-screen w-screen inset-0 object-cover opacity-33  ' src={picture}/>
+    <div className='bg-red-950/80 z-10'>
       <Nav />
           <Routes>
             <Route path="/" element={<HomePage />} />

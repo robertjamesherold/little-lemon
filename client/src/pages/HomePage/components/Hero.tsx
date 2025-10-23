@@ -28,7 +28,7 @@ export function Hero() {
             We are a family owned Mediterranean restaurant, focused on traditional recipes served with a modern twist.
         </p>
         </div>
-          <div className="max-h-[350px] shadow-lg z-5 flex justify-center touch-none select-none" style={{gridArea: 'image'}}> 
+          <div className="max-h-[300px] md:max-h-[350px] shadow-lg z-5 flex justify-center touch-none select-none" style={{gridArea: 'image'}}> 
           <img className='w-full overflow-hidden h-full object-cover md:rounded-2xl' draggable={false} src={bg}></img>
         </div>
         <div className="flex  z-5 flex-col items-start gap-3 pb-8 md:pb-4 px-4" style={{gridArea: 'action'}}>

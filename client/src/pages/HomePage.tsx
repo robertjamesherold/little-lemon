@@ -5,7 +5,7 @@ import { MenuPreview } from "./HomePage/components/MenuPreview";
 export function HomePage() {
   return (
     <HomePageMain>
-      <div className="flex w-full flex-col py-10 md:py-0 gap-10">
+      <div className="flex w-full flex-col py-0 md:py-10 gap-0 md:gap-10">
         <Hero />
         <MenuPreview />
       </div>

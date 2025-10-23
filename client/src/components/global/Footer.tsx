@@ -1,5 +1,5 @@
 export function Footer() {
-  return <footer className=" relative primary-backgroundcolor-2 text-green-100">
+  return <footer className=" relative primary-backgroundcolor- text-green-100">
        <div className="mx-auto flex w-full max-w-6xl flex-col md:flex-row gap-3 px-6 py-6 text-sm sm:items-center sm:justify-between">
           <p>&copy; {new Date().getFullYear()} Little Lemon. Alle Rechte vorbehalten.</p>
           <div className="flex  flex-wrap items-center gap-4">

@@ -43,7 +43,7 @@ export function ThankYouPage() {
 
   return (
   <ThankPageMain className='px-0'>
-        <div className="flex w-full flex-col py-10 md:py-0 gap-10">
+        <div className="flex w-full flex-col py-0 md:py-0 gap-10">
 
     <Section className="flex w-full justify-center" ariaLabel="Reservierungsbestätigung">
       <Article className="w-full sm:max-w-lg space-y-8 sm:rounded-2xl primary-backgroundcolor-2 p-4 text-center text-white shadow-lg backdrop-blur-sm">
