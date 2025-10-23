@@ -8,7 +8,7 @@ import pastaImg from "../../../assets/food_4.png";
 import lemonDessertImg from "../../../assets/food_5.png";
 import mezzeImg from "../../../assets/food_6.png";
 
-type MenuCategory = "Lunch" | "Mains" | "Desserts" | "A La Carte" | "Specials";
+type MenuCategory = "All" |  "Lunch" | "Mains" | "Desserts" | "A La Carte" | "Specials";
 
 type MenuItem = {
   id: string;
@@ -20,6 +20,7 @@ type MenuItem = {
 };
 
 const CATEGORIES: MenuCategory[] = [
+  "All",
   "Lunch",
   "Mains",
   "Desserts",
@@ -28,13 +29,76 @@ const CATEGORIES: MenuCategory[] = [
 ];
 
 const MENU_ITEMS: MenuItem[] = [
+{
+    id: "greek-salad",
+    title: "Greek Salad",
+    description:
+      "The famous Greek salad of crispy lettuce, peppers, olives and our Chicago style feta.",
+    price: 12.99,
+    category: 'All',
+    image: greekSaladImg,
+  },
+  {
+    id: "bruschetta",
+    title: "Bruschetta",
+    description:
+      "Grilled sourdough topped with garlic confit, heirloom tomatoes, and fresh basil.",
+    price: 7.99,
+    category: "All",
+    image: bruschettaImg,
+  },
+  {
+    id: "grilled-fish",
+    title: "Grilled Fish",
+    description:
+      "Charcoal-grilled catch of the day served with lemon butter and seasonal greens.",
+    price: 20,
+    category: "All",
+    image: grilledFishImg,
+  },
+  {
+    id: "pasta",
+    title: "Pasta",
+    description:
+      "House-made pasta tossed in roasted tomato sauce with pecorino and basil oil.",
+    price: 18.99,
+    category: "All",
+    image: pastaImg,
+  },
+  {
+    id: "lemon-dessert",
+    title: "Lemon Dessert",
+    description:
+      "Silky lemon custard layered with almond crumble and whipped mascarpone.",
+    price: 6.99,
+    category: "All",
+    image: lemonDessertImg,
+  },
+  {
+    id: "mezze",
+    title: "Chef's Mezze",
+    description:
+      "A La Carte selection of dips, marinated olives, and warm pita straight from the oven.",
+    price: 15.5,
+    category: "All",
+    image: mezzeImg,
+  },
+  {
+    id: "seasonal-special",
+    title: "Seasonal Special",
+    description:
+      "Rotating market-inspired dish crafted daily by our chef.",
+    price: 22,
+    category: "All",
+    image: lemonDessertImg,
+  },
   {
     id: "greek-salad",
     title: "Greek Salad",
     description:
       "The famous Greek salad of crispy lettuce, peppers, olives and our Chicago style feta.",
     price: 12.99,
-    category: "Lunch",
+    category: 'Lunch',
     image: greekSaladImg,
   },
   {
@@ -89,6 +153,7 @@ const MENU_ITEMS: MenuItem[] = [
       "Rotating market-inspired dish crafted daily by our chef.",
     price: 22,
     category: "Specials",
+    image: lemonDessertImg,
   },
 ];
 
@@ -105,14 +170,16 @@ export function MenuPreview() {
     [activeCategory]
   );
 
+
+
   return (
-    <Section className="w-full" ariaLabel="Order for delivery">
-      <Article className="md:rounded-2xl bg-white p-6 shadow-lg">
+    <Section className="w-full " ariaLabel="Order for delivery">
+      <Article className="md:rounded-2xl bg-white p-6 shadow-lg ">
         <header className="mb-6 space-y-4">
           <h2 className="text-xl font-semibold uppercase primary-color-2">
             Order for delivery!
           </h2>
-          <div className="flex flex-wrap gap-3">
+          <div className="flex gap-3 flex-wrap ">
             {CATEGORIES.map((category) => {
               const isActive = category === activeCategory;
               return (
@@ -121,7 +188,7 @@ export function MenuPreview() {
                   type="button"
                   onClick={() => setActiveCategory(category)}
                   aria-pressed={isActive}
-                  className={`rounded-full border px-4 py-2 text-sm font-medium transition ${
+                  className={`rounded-full border px-4 py-2 text-nowrap text-sm font-medium transition ${
                     isActive
                       ? "button-bg-1 text-white shadow-sm"
                       : "border-gray-300 bg-white text-gray-700"

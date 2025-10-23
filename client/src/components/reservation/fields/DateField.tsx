@@ -1,4 +1,3 @@
-import { Button } from "../../ui";
 import { Chevron } from "../../icons/Chevron";
 import { CalendarPicker } from "../../form/CalendarPicker";
 
@@ -14,14 +13,14 @@ export function DateField({ value, onChange, isOpen, onToggle, onClose }: DateFi
   return (
     <div className="relative flex flex-col gap-1">
       <label className="text-sm font-medium text-gray-700">Date</label>
-      <Button
+      <button
         onClick={onToggle}
-        className="w-full justify-between"
-        variant="outline"
+        className={ ` px-4 py-2 text-sm font-medium rounded-md border border-gray-300 hover:bg-gray-100 focus:ring-blue-500 disabled:text-gray-400 w-full items-center flex justify-between ${value.length >= 10 ?  'text-gray-700':'text-gray-600/40'}`}
+        
       >
         {value || "Select Date"}
-        <Chevron open={isOpen} />
-      </Button>
+        <span><Chevron open={isOpen} /></span>
+      </button>
 
       {isOpen && (
         <>

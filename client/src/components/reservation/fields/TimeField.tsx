@@ -1,4 +1,3 @@
-import { Button } from "../../ui";
 import { Chevron } from "../../icons/Chevron";
 import { TimePicker } from "../../form/TimePicker";
 
@@ -14,14 +13,13 @@ export function TimeField({ value, onChange, isOpen, onToggle, onClose }: TimeFi
   return (
     <div className="relative flex flex-col gap-1">
       <label className="text-sm font-medium text-gray-700">Time</label>
-      <Button
+      <button
         onClick={onToggle}
-        className="w-full justify-between"
-        variant="outline"
+        className={`px-4 py-2 text-sm font-medium rounded-md border border-gray-300 hover:bg-gray-100 focus:ring-blue-500 disabled:text-gray-400 w-full items-center flex justify-between ${ value.length >= 5 ? 'text-gray-700': 'text-gray-600/40' }`}
       >
         {value || "Select Time"}
-        <Chevron open={isOpen} />
-      </Button>
+        <span><Chevron open={isOpen} /></span>
+      </button>
 
       {isOpen && (
         <>

@@ -14,22 +14,22 @@ export function Hero() {
   };
  return(
      <Section className="flex w-full justify-center" ariaLabel="Little Lemon Highlights">
-       <Article className="articlehomepage md:rounded-2xl primary-backgroundcolor-2 p-4 text-left text-white shadow-lg backdrop-blur-sm">
+       <Article className="articlehomepage md:rounded-2xl primary-backgroundcolor-2 md:p-4 text-left text-white shadow-lg backdrop-blur-sm">
              
-        <div className="w-full" style={{gridArea: 'headline'}}>
+        <div className="w-full px-4  pt-8 md:pt-4" style={{gridArea: 'headline'}}>
           <h1 className='primary-color-1 mb-0'>Little Lemon</h1>
           <h2 className='mt-0'>Chicago</h2>
         </div>
      
-        <div className="space-y-4" style={{gridArea: 'paragraph'}}> 
+        <div className="px-4 pt-0" style={{gridArea: 'paragraph'}}> 
         <p className="text-base max-w-[40ch]">
             We are a family owned Mediterranean restaurant, focused on traditional recipes served with a modern twist.
         </p>
         </div>
-          <div className="max-h-[320px] flex justify-center" style={{gridArea: 'image'}}> 
-          <img className='w-full overflow-hidden h-full object-cover rounded-2xl' src={productshot_1}></img>
+          <div className="max-h-[350px] flex justify-center touch-none select-none" style={{gridArea: 'image'}}> 
+          <img className='w-full overflow-hidden h-full object-cover md:rounded-2xl' draggable={false} src={productshot_1}></img>
         </div>
-        <div className="flex flex-col items-start gap-3 " style={{gridArea: 'action'}}>
+        <div className="flex flex-col items-start gap-3 pb-8 md:pb-4 px-4" style={{gridArea: 'action'}}>
          
           <Button size="md" variant="primary" onClick={goToReservation} className="w-auto">
             Reserve a Table

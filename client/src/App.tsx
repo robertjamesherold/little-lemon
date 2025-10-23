@@ -4,11 +4,13 @@ import { ReservationPage } from "./pages/ReservationPage";
 import { ThankYouPage } from "./pages/ThankYouPage";
 import { Nav } from "./components/global/Nav";
 import { Footer } from "./components/global/Footer";
+import picture from './assets/bg.jpeg'
 import './App.scss'
 
 export default function App() {
-  return (
-    <div className="min-h-screen secondary-backgroundcolor-2 flex flex-col">
+  return (<>
+  <img className='fixed z-0 h-screen w-screen inset-0 object-cover ' src={picture}/>
+    <div className='body'>
       <Nav />
           <Routes>
             <Route path="/" element={<HomePage />} />
@@ -16,7 +18,7 @@ export default function App() {
             <Route path="/thank-you" element={<ThankYouPage />} />
           </Routes>
       <Footer />
-   
-    </div>
+   </div>
+  </>
   );
 }

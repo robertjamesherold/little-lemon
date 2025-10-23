@@ -2,7 +2,7 @@ import { Link, NavLink} from "react-router-dom";
 
 
 export function Nav() {
-  return <nav className="bg-white/80 backdrop-blur border-b border-green-100"><div className="mx-auto flex w-full max-w-6xl items-center justify-between px-6 py-4">
+  return <nav className="sticky top-0 bg-white backdrop-blur border-b border-green-100 z-5 "><div className="mx-auto flex w-full max-w-6xl items-center justify-between px-6 py-4">
             <Link to="/" className="text-lg font-semibold text-green-800">
               Little Lemon
             </Link>

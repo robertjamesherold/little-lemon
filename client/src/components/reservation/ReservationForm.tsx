@@ -21,10 +21,16 @@ const createEmptyReservation = (): ReservationData => ({
   date: "",
   time: "",
   guests: "",
-  name: "",
+  vorname: "",
+  nachname: "",
   email: "",
   phone: "",
   special: "",
+  address: "",
+  number: "",
+  postal: "",
+  city: "",
+
 });
 
 export function ReservationForm({ onCancel, onComplete }: ReservationFormProps) {
@@ -36,7 +42,7 @@ export function ReservationForm({ onCancel, onComplete }: ReservationFormProps) 
     formData.date && formData.time && formData.guests
   );
   const isStep2Complete = Boolean(
-    formData.name && formData.email && formData.phone
+    formData.vorname && formData.nachname && formData.email && formData.address && formData.number && formData.city && formData.postal
   );
 
   const canProceed = useMemo(() => {
@@ -78,11 +84,12 @@ export function ReservationForm({ onCancel, onComplete }: ReservationFormProps) 
   const showBackButton = step > 0 || Boolean(onCancel);
 
   return (
-    <form
+  <div className='relative flex w-full rounded-2xl max-w-sm  overflow-hidden'>
+    <form 
       onSubmit={handleSubmit}
-      className="flex flex-col w-full max-w-sm mx-auto bg-white dark:bg-gray-900 rounded-lg shadow-md overflow-visible min-h-fit"
+      className="relative flex flex-col w-full bg-white rounded-xl shadow-xl overflow-visible "
     >
-      <Header className="primary-backgroundcolor-2 text-white px-4 py-2  text-center text-lg font-semibold overflow-hidden rounded-t-lg">
+      <Header className="primary-backgroundcolor-2 text-white px-4 py-2  overflow-hidden text-center text-lg font-semibold ">
         <h2>{STEP_TITLES[step]}</h2>
       </Header>
 
@@ -92,7 +99,7 @@ export function ReservationForm({ onCancel, onComplete }: ReservationFormProps) 
         {step === 2 && <Step3Confirmation data={formData} />}
       </div>
 
-      <div className="flex gap-2 p-4 pt-0">
+      <div className="flex gap-2 p-4 mt-4 pt-0">
         {showBackButton && (
           <Button
             type="button"
@@ -115,5 +122,6 @@ export function ReservationForm({ onCancel, onComplete }: ReservationFormProps) 
         </Button>
       </div>
     </form>
+    </div>
   );
 }

@@ -6,15 +6,20 @@ type PhoneFieldProps = {
 };
 
 export function PhoneField({ value, onChange }: PhoneFieldProps) {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const digitsOnly = e.target.value.replace(/\D/g, ""); // entfernt alles außer Zahlen
+    onChange(digitsOnly);
+  };
+
   return (
     <Input
+      aria-label="phone"
       label="Phone"
       name="phone"
       type="tel"
       value={value}
-      onChange={(event) => onChange(event.target.value)}
+      onChange={handleChange}
       placeholder="Your phone number"
-      required
     />
   );
 }

@@ -8,7 +8,7 @@ type EmailFieldProps = {
 export function EmailField({ value, onChange }: EmailFieldProps) {
   return (
     <Input
-      label="E-Mail"
+      label="E-Mail*"
       name="email"
       type="email"
       value={value}

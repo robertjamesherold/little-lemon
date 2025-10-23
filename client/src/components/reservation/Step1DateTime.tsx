@@ -8,11 +8,9 @@ import {
 } from "./fields";
 
 export function Step1DateTime({ data, setData }: Step1DateTimeProps) {
-  const [openPicker, setOpenPicker] = useState<
-    "calendar" | "time" | "select" | null
-  >(null);
+  const [openPicker, setOpenPicker] = useState<"calendar" | "time" | null>(null);
 
-  const togglePicker = (type: "calendar" | "time" | "select") => {
+  const togglePicker = (type: "calendar" | "time") => {
     setOpenPicker((prev) => (prev === type ? null : type));
   };
 
@@ -42,9 +40,6 @@ export function Step1DateTime({ data, setData }: Step1DateTimeProps) {
       <GuestsField
         value={data.guests}
         onChange={(value) => setData({ ...data, guests: value })}
-        isOpen={openPicker === "select"}
-        onToggle={() => togglePicker("select")}
-        onClose={closePickers}
       />
 
       <SpecialRequestsField

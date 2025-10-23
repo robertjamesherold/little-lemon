@@ -20,8 +20,8 @@ export function ReservationPage() {
 
   return (
   <Main>
-    <Section className="flex w-full justify-center" ariaLabel="Reservierung">
-      <Article className="w-full max-w-lg">
+    <Section className="flex w-full h-full place-content-center place-items-center " ariaLabel="Reservierung">
+      <Article className="w-full max-w-lg place-self-center h-full flex justify-center items-center">
         <ReservationForm onCancel={handleCancel} onComplete={handleComplete} />
       </Article>
     </Section>

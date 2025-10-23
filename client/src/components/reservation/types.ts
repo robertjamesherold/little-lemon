@@ -4,10 +4,15 @@ export type ReservationData = {
   date: string;
   time: string;
   guests: string;
-  name: string;
+  vorname: string;
+  nachname: string;
   email: string;
   phone: string;
   special: string;
+  address: string;
+  number: string;
+  postal: string;
+  city: string;
 };
 
 export type Step1DateTimeProps = {

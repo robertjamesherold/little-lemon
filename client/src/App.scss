@@ -23,6 +23,10 @@
     background-color:var(--primary-color-1);
     }
 
+ .primary-bordercolor-2 {
+    border-color: var(--primary-color-2);
+    }   
+
 .primary-bordercolor-1 {
     border-color:var(--primary-color-1);
     }
@@ -34,9 +38,7 @@
 .primary-backgroundcolor-2 {
     background-color:var(--primary-color-2);
     }
-.primary-bordercolor-2 {
-    border-color:var(--primary-color-2);
-    }
+
 .secondary-color-1 {
     color:var(--secondary-color-1);
 }
@@ -80,11 +82,22 @@
     background-color:var(--highlight-color-2);
     } 
 
+input.no-spin::-webkit-outer-spin-button,
+input.no-spin::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input.no-spin[type="number"] {
+    -moz-appearance: textfield;
+    appearance: textfield;
+}
+
 h1 {
     font-family: var(--markazi);
     font-weight: 500;
     font-size: 64px;
-    line-height: 100%;
+    line-height: 75%;
     }
 
 h2 {
