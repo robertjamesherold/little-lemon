@@ -7,6 +7,8 @@ import grilledFishImg from "../../../assets/food_3.png";
 import pastaImg from "../../../assets/food_4.png";
 import lemonDessertImg from "../../../assets/food_5.png";
 import mezzeImg from "../../../assets/food_6.png";
+import bg from "../../../assets/bg_2.jpeg";
+
 
 type MenuCategory = "All" |  "Lunch" | "Mains" | "Desserts" | "A La Carte" | "Specials";
 
